@@ -3,7 +3,6 @@
 
 // MIN WIDTH
 @media only screen and (min-width: $break-mobile-s){ // 480px
-    .svgiconlist--grid{grid-template-columns:1fr 1fr;}
 }
 
 @media only screen and (min-width: $break-mobile){ // 576px
@@ -12,13 +11,10 @@
 
 @media only screen and (min-width: $break-tablet-potrait){ // 768px
     .page{width:$break-tablet-potrait;}
-    .svgiconlist--grid{grid-template-columns:1fr 1fr 1fr 1fr;}
-    .box-headings .grid{grid-template-columns:1fr 1fr;}
 }
 
 @media only screen and (min-width: $break-tablet-landscape){ // 992px
     .page{width:$break-tablet-landscape;}
-    .box-headings .grid{grid-template-columns:1fr 1fr 1fr;}
 }
 
 @media only screen and (min-width: $break-desktop){ // 1200px
@@ -28,7 +24,7 @@
 // MAX WIDTH
 @media only screen and (max-width: calc($break-mobile - 1px)){
     .main-header__title{margin-bottom:$space-m;}
-    .main-header, .main-nav__ul{flex-direction:column;}
+    .main-header{flex-direction:column;}
 }
 
 /* TABLE MEDIA QUERIES for mobile & tablet */

@@ -1,12 +1,8 @@
 import React from "react";
 import {Routes, Route} from "react-router-dom";
-import Navigation from "components/Navigation/Navigation";
 
 import PageHome from "pages/PageHome/PageHome";
-import PageIcons from "pages/PageIcons/PageIcons";
-import PageTypography from "pages/PageTypography/PageTypography";
-import PageColors from "pages/PageColors/PageColors";
-import PageGridSystem from "pages/PageGridSystem/PageGridSystem";
+import PageCharacterSelection from "pages/CharacterSelection/CharacterSelection";
 
 import Toggle from "components/Toggle/Toggle";
 import "./RoutesLayout.scss";
@@ -15,18 +11,17 @@ function RoutesLayout(props) {
 	return (
 		<>
 			<div className="page">
-				<header className="main-header">
-					<h1 className="main-header__title h1">Design System</h1>
+				<header className="main-header spacing">
+					<div>
+						<h1 className="main-header__title h2">The sword that binds the soul</h1>
+						<h2 className="h5 color-txt--grey-d1">written and developed by Alessio Carone</h2>
+					</div>
 					<Toggle checked={props.checked} onChange={props.onChange} className="page__theme" />
 				</header>
-				<Navigation />
 				<main className="main-content">
 					<Routes>
-						<Route path="/design-system/" element={<PageHome />} />
-						<Route path="/design-system/icons" element={<PageIcons />} />
-						<Route path="/design-system/typography" element={<PageTypography />} />
-						<Route path="/design-system/colors" element={<PageColors />} />
-						<Route path="/design-system/grid-system" element={<PageGridSystem />} />
+						<Route path="/cyoa/" element={<PageHome />} />
+						<Route path="/cyoa/CharacterSelection" element={<PageCharacterSelection />} />
 					</Routes>
 				</main>
 			</div>

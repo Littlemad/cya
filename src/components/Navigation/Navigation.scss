@@ -1,18 +1,5 @@
-@use 'styles/01-settings.scss' as *;
+@use 'styles/01-settings' as *;
 
-.main-nav{margin:$space-xl 0;}
-.main-nav__ul{display:flex; grid-gap:$space-m;}
-.main-nav__link{
-    font-weight:bold;
-    padding:$space-xs;
-    text-decoration:none;
+.main-nav--active{border:2px solid red;}
 
-    &:hover, &:focus{
-        text-decoration:none;
-    }
-
-    &:visited{
-        color:$color-link;
-    }
-}
-.main-nav--active{border-bottom:$space-xs solid $color-grey;}
+.highlight{color:$color-grey-d1; font-style:italic;}

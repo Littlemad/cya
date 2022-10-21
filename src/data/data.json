@@ -57,5 +57,27 @@
 		{"value": "#00c", "themeDark": "#C1D6EB", "var": "link", "name": "Link"},
 		{"value": "#a4b", "themeDark": "#d0adf0", "var": "link-visited", "name": "Link Visited"},
 		{"value": "#c30", "var": "link-active", "name": "Link Active"}
+	],
+
+	"locations": [
+		{
+			"id": "1",
+			"image": "https://i.pinimg.com/originals/58/27/3e/58273e1c7ad45a72da84155b976c9016.jpg",
+			"longDesc": "bla bla bla 1",
+			"shortDesc": "Walk through the",
+			"name": "Entrance",
+			"locationConnection": [2, 3],
+			"choices": [
+				{"id": 1, "name": "Buy ", "shortDesc": "a sharp sword", "add": "item"},
+				{"id": 2, "name": "Steal ", "shortDesc": "the ornate dagger", "add": "item", "consequences": [1]},
+				{"id": 3, "name": "Medidate", "shortDesc": "before the challenge ahead"}
+			]
+		},
+		{"id": 2, "shortDesc": "Open the door and enter the", "name": "Room", "locationConnection": [1]},
+		{"id": 3, "shortDesc": "Walk torch in hand towards the", "name": "Dark Corridor", "locationConnection": [1]}
+	],
+	"consequences": [
+		{"id": 1, "name": "Stolen object", "shortDesc": "Description consequences of stealing"},
+		{"id": 2, "name": "Overslept", "shortDesc": "Description consequences of oversleeping"}
 	]
 }

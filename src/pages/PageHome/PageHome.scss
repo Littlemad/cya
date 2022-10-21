@@ -1,16 +1,2 @@
 @use 'styles/01-settings' as *;
 @use 'styles/02-tools' as *;
-
-.box-presentation__txt{
-    font-size: $font-size-xl; 
-    line-height: $line-height-xl;
-    width: 100%;
-    color:$color-grey-d1;
-    margin-bottom: $space-xl;
-}
-
-@media only screen and (min-width: $break-tablet-landscape){ // 992px
-    .box-presentation__txt{
-        width: 65%;
-    }
-}
