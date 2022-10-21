@@ -1,0 +1,11 @@
+// INFO for adding props if condition are true 
+
+<ul {...(hasLayout ? {className: `svgiconlist
+svgiconlist--grid`} : {className: "svgiconlist"})}>
+
+
+// add properties on the HTML tag
+	useEffect(() => {
+		//		const root = document.documentElement;
+		//		root.style.setProperty("--primary", colorsJSON[0].value);
+	}, []);

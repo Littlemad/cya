@@ -1,0 +1,5 @@
+@use 'styles/01-settings' as *;
+
+.svgiconlist{text-transform:capitalize; text-align:center;}
+.svgiconlist--grid{display:grid; grid-gap:$space-l; grid-template-columns:1fr;}
+.svgiconlist_label{margin-bottom:$space-s;}

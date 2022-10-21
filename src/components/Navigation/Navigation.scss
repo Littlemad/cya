@@ -1,0 +1,18 @@
+@use 'styles/01-settings.scss' as *;
+
+.main-nav{margin:$space-xl 0;}
+.main-nav__ul{display:flex; grid-gap:$space-m;}
+.main-nav__link{
+    font-weight:bold;
+    padding:$space-xs;
+    text-decoration:none;
+
+    &:hover, &:focus{
+        text-decoration:none;
+    }
+
+    &:visited{
+        color:$color-link;
+    }
+}
+.main-nav--active{border-bottom:$space-xs solid $color-grey;}

@@ -1,0 +1,9 @@
+@use './../../styles/01-settings.scss' as *;
+
+.page{
+	min-height:100vh;
+	padding:$space-m; 
+	margin:auto; 
+	background:var(--bg-content);
+}
+.main-header{display:flex; justify-content:space-between; align-items:center;}

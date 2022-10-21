@@ -1,0 +1,42 @@
+@use 'styles/01-settings' as *;
+@use 'styles/02-tools' as *;
+
+.box-typography .cols{
+    grid-template-columns:unset;
+}
+
+.box-headings .grid{
+    grid-template-columns:1fr;
+}
+
+.box-typography__select-font{
+    margin: $space-xl 0 $space-m;
+    font-weight: bold; 
+}
+
+.box-headings__titles{
+    h1, h2, h3, h4, h5, h6{
+        margin-bottom:$space-s;
+    }
+}
+
+.box-pragraphs, .box-font-characters{
+    .col2 p{
+        font-size: $font-size-l;
+        line-height: $line-height-l;
+    }
+    .col3 p{
+        font-size: $font-size-xl;
+        line-height: $line-height-xl;
+    }      
+}
+
+.type-content:after{
+    white-space:pre-wrap;
+    content:"The quick brown fox jumps over the lazy dog 0123456789 \a . , : ; “ ” \" ! ? \\ / * @ £ $ € ° + = ÷ -";
+}
+
+.lorem-ipsum:after{
+    display:block; max-width: 40rem;
+    content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+}

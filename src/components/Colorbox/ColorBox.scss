@@ -1,0 +1,10 @@
+@use 'styles/01-settings' as *;
+@use 'styles/02-tools' as *;
+
+.colorbox{width:100%; border:1px solid $color-grey;}
+.colorbox__name{padding:$space-s $space-m;}
+.colorbox__color{height:toRem(120); border:solid $color-grey; border-width:1px 0;}
+.colorbox__val{
+    padding:$space-s $space-m;;
+    p:last-child{margin-bottom:0;}
+}

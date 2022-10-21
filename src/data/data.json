@@ -1,0 +1,61 @@
+{
+	"text": [{"value": "#000", "var": "text", "themeDark": "#fff", "name": "Text color"}],
+	"icons": [
+		{"name": "arrow", "desc": "An arrow indicating a direction"},
+		{"name": "home", "desc": "An home icon"},
+		{"name": "pencil", "desc": "Pencil indicating editing"},
+		{"name": "pricetag", "desc": "Label tag symbol"},
+		{"name": "cart", "desc": "Shopping cart symbol"},
+		{"name": "phone", "desc": "Phone icon"},
+		{"name": "user", "desc": "User symbol"},
+		{"name": "quoteleft", "desc": "Opening quotation marks"},
+		{"name": "quoteright", "desc": "Closing quotation makrs"},
+		{"name": "search", "desc": "A lens indicating searching"},
+		{"name": "cog", "desc": "A cog indicating setting symbol"},
+		{"name": "bin", "desc": "A bin symbol"},
+		{"name": "plus", "desc": "Plus symbol"},
+		{"name": "minus", "desc": "Minus symbol"},
+		{"name": "info", "desc": "Informative icon"},
+		{"name": "blocked", "desc": "Denied access symbol"},
+		{"name": "cross", "desc": "A cross"},
+		{"name": "checkmark", "desc": "A checkmark"},
+		{"name": "embed", "desc": "A symbol indicating embedding code"}
+	],
+	"typography": [
+		{"value": "lato", "var": "primary", "name": "Lato"},
+		{"value": "georgia", "var": "secondary", "name": "Georgia"},
+		{"value": "nunito", "var": "tertiary", "name": "Nunito"}
+	],
+	"colors": [
+		{"value": "#fff", "var": "white", "name": "White"},
+		{"value": "#f5f5f5", "var": "grey-l3", "name": "Very Light Grey"},
+		{"value": "#eee", "var": "grey-l2", "name": "Light Grey"},
+		{"value": "#ddd", "var": "grey-l1", "name": "Lightish Grey"},
+		{"value": "#bbb", "var": "grey", "name": "Grey"},
+		{"value": "#999", "var": "grey-d1", "name": "Darkish Grey"},
+		{"value": "#666", "var": "grey-d2", "name": "Dark Grey"},
+		{"value": "#333", "var": "grey-d3", "name": "Very Dark Grey"},
+		{"value": "#000", "var": "black", "name": "Black"},
+
+		{"value": "#68BBE3", "var": "primary-l2", "name": "Baby Blue"},
+		{"value": "#0E86D4", "var": "primary-l1", "name": "Blue Grotto"},
+		{"value": "#055C9D", "var": "primary", "name": "Blue"},
+		{"value": "#003060", "var": "primary-d1", "name": "Navy Blue"},
+		{"value": "#001040", "var": "primary-d2", "name": "Dark Navy Blue"},
+
+		{"value": "#FEF4C0", "var": "secondary-l2", "name": "Light yellow"},
+		{"value": "#FDB10B", "var": "secondary-l1", "name": "Light Orange"},
+		{"value": "#FE8535", "var": "secondary", "name": "Orange"},
+		{"value": "#FD292F", "var": "secondary-d1", "name": "Desaturated Red"},
+		{"value": "#B20000", "var": "secondary-d2", "name": "Light Brown"},
+
+		{"value": "#390", "var": "success", "name": "Success"},
+		{"value": "#fc0", "var": "warn", "name": "Warning"},
+		{"value": "#c30", "var": "fail", "name": "Failure"}
+	],
+	"links": [
+		{"value": "#00c", "themeDark": "#C1D6EB", "var": "link", "name": "Link"},
+		{"value": "#a4b", "themeDark": "#d0adf0", "var": "link-visited", "name": "Link Visited"},
+		{"value": "#c30", "var": "link-active", "name": "Link Active"}
+	]
+}

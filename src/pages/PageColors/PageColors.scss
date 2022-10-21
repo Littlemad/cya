@@ -1,0 +1,29 @@
+@use 'styles/01-settings' as *;
+
+.box-palette__grid{
+    display:grid; grid-gap:$space-m;
+}
+
+.box-text-colors .cols{display:grid; grid-gap:$space-m; grid-template-columns:repeat(3, 1fr);}
+.box-text-colors__title{text-align:center; margin-bottom:$space-s;}
+
+@media only screen and (min-width: $break-mobile){ // 576px
+    .box-palette__grid{
+        grid-template-columns:repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: $break-tablet-potrait){ // 768px
+    .box-palette__grid{
+        grid-template-columns:repeat(4, 1fr);
+    }
+    .box-text-colors .cols{
+        grid-template-columns:repeat(4, 1fr);
+    }
+}
+
+@media only screen and (min-width: $break-tablet-landscape){ // 992px
+    .box-palette__grid{
+        grid-template-columns:repeat(5, 1fr);
+    }
+}
