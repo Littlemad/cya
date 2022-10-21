@@ -27,26 +27,29 @@ $font-family-primary:"Lato", #{$font-fallback-sansSerif};
 $font-family-secondary: "Georgia", #{$font-fallback-serif};
 $font-family-tertiary: "Nunito", #{$font-fallback-sansSerif};
 
-$font-size-xl: toRem(32);
-$line-height-xl: toRem(36);
+$font-size-xl: toRem(28);
+$line-height-xl: toRem(32);
 
-$font-size-l: toRem(24);
-$line-height-l: toRem(28);
+$font-size-l: toRem(22);
+$line-height-l: toRem(26);
 
-$font-size-m: toRem(16);
-$line-height-m: toRem(20);
+$font-size-m: toRem(18);
+$line-height-m: toRem(22);
+
+$font-size-s: toRem(16);
+$line-height-s: toRem(20);
 
 $h1: toRem(48);
 $h1-line-height: toRem(48);
 
-$h2: toRem(32);
-$h2-line-height: toRem(32);
+$h2: toRem(36);
+$h2-line-height: toRem(36);
 
-$h3: toRem(26);
-$h3-line-height: toRem(26);
+$h3: toRem(28);
+$h3-line-height: toRem(28);
 
-$h4: toRem(20);
-$h4-line-height: toRem(20);
+$h4: toRem(22);
+$h4-line-height: toRem(22);
 
 $h5: $font-size-m;
 $h5-line-height: $font-size-m;

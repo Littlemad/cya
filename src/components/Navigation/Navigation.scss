@@ -1,5 +1,8 @@
 @use 'styles/01-settings' as *;
+@use 'styles/02-tools' as *;
 
 .main-nav--active{border:2px solid red;}
 
-.highlight{color:$color-grey-d1; font-style:italic;}
+.highlight{font-style:italic;}
+.main-content__title{font-weight:bold; margin-bottom:$space-s;}
+.main-content__img{height:auto; max-height:toRem(250); margin-bottom:$space-m;}

@@ -1,13 +1,13 @@
 import React from "react";
 import Navigation from "components/Navigation/Navigation";
-import "./PageHome.scss";
 
-function Home() {
+const Page3 = (props) => {
 	return (
 		<>
-			<Navigation room={1} />
+			Page 3
+			<Navigation room={3} />
 		</>
 	);
-}
+};
 
-export default Home;
+export default Page3;

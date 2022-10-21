@@ -63,9 +63,11 @@
 		{
 			"id": "1",
 			"image": "https://i.pinimg.com/originals/58/27/3e/58273e1c7ad45a72da84155b976c9016.jpg",
-			"longDesc": "bla bla bla 1",
+			"imageAlt": "An arena in a colosseum in ancient rome",
+			"longDesc": "The Arena is the stage where the action took place, where animals and men fought and died to entertain the masses. The floor was a huge wooden platform of oval shape with a lot of sand on it. It was designed to keep the action moving on the arena whilst allowing the best view to the spectators without any restrictions. The blood, the battle, the thrill of life and death.",
 			"shortDesc": "Walk through the",
-			"name": "Entrance",
+			"name": "The arena entrance",
+			"url": "/cyoa/page01",
 			"locationConnection": [2, 3],
 			"choices": [
 				{"id": 1, "name": "Buy ", "shortDesc": "a sharp sword", "add": "item"},
@@ -73,8 +75,18 @@
 				{"id": 3, "name": "Medidate", "shortDesc": "before the challenge ahead"}
 			]
 		},
-		{"id": 2, "shortDesc": "Open the door and enter the", "name": "Room", "locationConnection": [1]},
-		{"id": 3, "shortDesc": "Walk torch in hand towards the", "name": "Dark Corridor", "locationConnection": [1]}
+		{
+			"id": 2,
+			"image": "https://cdn.projectexpedition.com/photos/5d430c74a829b_sized.jpg",
+			"imageAlt": "alt 2",
+			"shortDesc": "Open the door and enter the",
+			"longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"name": "Room",
+			"url": "/cyoa/page02",
+			"locationConnection": [1, 4]
+		},
+		{"id": 3, "shortDesc": "Walk torch in hand towards the", "longDesc": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "name": "Dark Corridor", "url": "/cyoa/page03", "locationConnection": [1]},
+		{"id": 4, "longDesc": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "shortDesc": "Walk towards the dusty", "name": "Stairs", "url": "/cyoa/page04", "locationConnection": [1]}
 	],
 	"consequences": [
 		{"id": 1, "name": "Stolen object", "shortDesc": "Description consequences of stealing"},
