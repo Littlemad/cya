@@ -2,16 +2,26 @@ import React from "react";
 import {Routes, Route} from "react-router-dom";
 import PageHome from "pages/PageHome/PageHome";
 import PageCharacterSelection from "pages/CharacterSelection/CharacterSelection";
+import dataJSON from "data/data.json";
 
-import Page1 from "pages/Locations/Page1";
-import Page2 from "pages/Locations/Page2";
-import Page3 from "pages/Locations/Page3";
-import Page4 from "pages/Locations/Page4";
+import Navigation from "components/Navigation/Navigation";
 
 import Toggle from "components/Toggle/Toggle";
 import "./RoutesLayout.scss";
 
+const myLocationsNum = dataJSON.locations.length;
+
 const RoutesLayout = (props) => {
+	function Page({number}) {
+		return (
+			<>
+				Page {number} <Navigation room={number} />
+			</>
+		);
+	}
+
+	const pageNumbers = Array.from({length: myLocationsNum}, (_, i) => i + 1);
+
 	return (
 		<>
 			<div className="page">
@@ -27,10 +37,9 @@ const RoutesLayout = (props) => {
 						<Route path="/cyoa/" element={<PageHome />} />
 						<Route path="/cyoa/CharacterSelection" element={<PageCharacterSelection />} />
 
-						<Route path="/cyoa/page1" element={<Page1 />} />
-						<Route path="/cyoa/page2" element={<Page2 />} />
-						<Route path="/cyoa/page3" element={<Page3 />} />
-						<Route path="/cyoa/page4" element={<Page4 />} />
+						{pageNumbers.map((number) => (
+							<Route key={number} path={`/cyoa/page${number}`} element={<Page number={number} />} />
+						))}
 					</Routes>
 				</main>
 			</div>
