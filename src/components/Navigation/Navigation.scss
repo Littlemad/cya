@@ -1,8 +1,18 @@
 @use 'styles/01-settings' as *;
 @use 'styles/02-tools' as *;
+@use "styles/grid-system" as *;
 
 .main-nav--active{border:2px solid red;}
 
 .highlight{font-style:italic;}
-.main-content__title{font-weight:bold; margin-bottom:$space-s;}
+.title{font-weight:bold; margin-bottom:$space-s;}
 .main-content__img{height:auto; max-height:toRem(250); margin-bottom:$space-m;}
+.inventory{
+    border:1px solid $color-grey-l1; font-size:.9rem;
+    .list{margin-top:$space-m;}
+}
+.main-ui{
+    width:100%;
+    .col1{@include col-size-8;}
+    .col2{@include col-size-4;}
+}

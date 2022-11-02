@@ -15,7 +15,7 @@ const RoutesLayout = (props) => {
 	function Page({number}) {
 		return (
 			<>
-				Page {number} <Navigation room={number} />
+				<Navigation room={number} />
 			</>
 		);
 	}

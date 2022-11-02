@@ -58,21 +58,46 @@
 		{"value": "#a4b", "themeDark": "#d0adf0", "var": "link-visited", "name": "Link Visited"},
 		{"value": "#c30", "var": "link-active", "name": "Link Active"}
 	],
+	"items": [
+		{
+			"id": 1,
+			"name": "A sharp sword",
+			"own": true,
+			"buy": 10
+		},
+		{
+			"id": 2,
+			"name": "An ornate dagger",
+			"own": true
+		},
+		{
+			"id": 3,
+			"name": "An ancient book",
+			"own": true,
+			"sell": 5
+		},
+		{
+			"id": 4,
+			"name": "An ancient book",
+			"own": false
+		}
+	],
 
 	"locations": [
 		{
 			"id": "1",
 			"image": "https://i.pinimg.com/originals/58/27/3e/58273e1c7ad45a72da84155b976c9016.jpg",
 			"imageAlt": "An arena in a colosseum in ancient rome",
-			"longDesc": "Longdesc 1",
+			"longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			"shortDesc": "Walk through the",
 			"name": "The arena entrance",
 			"url": "/cyoa/page1",
 			"locationConnection": [2, 3],
 			"choices": [
-				{"id": 1, "name": "Buy ", "shortDesc": "a sharp sword", "add": "item"},
-				{"id": 2, "name": "Steal ", "shortDesc": "the ornate dagger", "add": "item", "consequences": [1]},
-				{"id": 3, "name": "Medidate", "shortDesc": "before the challenge ahead"}
+				{"id": 1, "shortDesc": "Buy ", "name": "a sharp sword", "shortDescAfter": "for 10 coins", "item": [1]},
+				{"id": 2, "shortDesc": "Steal ", "name": "the ornate dagger", "item": [2], "consequences": [1]},
+				{"id": 3, "shortDesc": "Trade some magical essence for", "name": "an ancient book", "shortDescAfter": "and some coins", "item": [3]},
+				{"id": 4, "shortDesc": "Use the spell found in", "name": "an ancient book", "item": [4]}
 			]
 		},
 		{
@@ -85,8 +110,26 @@
 			"url": "/cyoa/page2",
 			"locationConnection": [1, 4]
 		},
-		{"id": 3, "image": "https://i.pinimg.com/originals/74/b4/95/74b4950d6db2186003b7bc9444926f41.jpg", "imageAlt": "alt", "longDesc": "longdesk 3", "shortDesc": "Walk torch in hand towards the", "name": "Dark Corridor", "url": "/cyoa/page3", "locationConnection": [1]},
-		{"id": 4, "image": "https://www.alro-group.com/wp-content/uploads/2014/12/placeholder-1024x640.jpg", "imageAlt": "alt", "longDesc": "longdesk 4", "shortDesc": "Walk towards the dusty", "name": "Stairs", "url": "/cyoa/page4", "locationConnection": [1, 5]},
+		{
+			"id": 3,
+			"image": "https://i.pinimg.com/originals/74/b4/95/74b4950d6db2186003b7bc9444926f41.jpg",
+			"imageAlt": "alt",
+			"longDesc": "longdesk 3",
+			"shortDesc": "Walk torch in hand towards the",
+			"name": "Dark Corridor",
+			"url": "/cyoa/page3",
+			"locationConnection": [1]
+		},
+		{
+			"id": 4,
+			"image": "https://www.alro-group.com/wp-content/uploads/2014/12/placeholder-1024x640.jpg",
+			"imageAlt": "alt",
+			"longDesc": "longdesk 4",
+			"shortDesc": "Walk towards the dusty",
+			"name": "Stairs",
+			"url": "/cyoa/page4",
+			"locationConnection": [1, 5]
+		},
 		{
 			"id": 5,
 			"image": "https://www.alro-group.com/wp-content/uploads/2014/12/placeholder-1024x640.jpg",

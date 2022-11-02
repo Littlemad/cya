@@ -8,8 +8,10 @@
 }
 
 // LISTS
-.list{margin-left:$space-l; max-width:$max-width;}
-.list__li{list-style-type:disc; margin-bottom:$space-s;}
+.list{
+    margin-left:$space-l; max-width:$max-width;
+    li{list-style-type:disc; margin-bottom:$space-s;}
+}
 
 // TITLE
 .title--margin{margin-bottom:$space-s;}
