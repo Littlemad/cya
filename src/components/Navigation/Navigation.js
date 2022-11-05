@@ -14,6 +14,7 @@ function Navigation(props) {
 
 	const [equipmentState, setEquipmentState] = useState(initialArray);
 	const [coinState, setCoinState] = useState(initialCoin);
+	const [isChoiceVisible, setIsChoiceVisible] = useState(true);
 
 	const checkNamesEquipment = () => {
 		return equipmentState.map((value) => myItem[value - 1].name).join(", ");
@@ -36,15 +37,18 @@ function Navigation(props) {
 
 		if (myItem[myItemID].buy) {
 			setCoinState(coinState - myItem[myItemID].buy);
+			setIsChoiceVisible(false);
 		}
 
 		if (myItem[myItemID].sell) {
 			setCoinState(coinState + myItem[myItemID].sell);
+			setIsChoiceVisible(false);
 		}
 
 		if (myItem[myItemID].own) {
 			// Add
 			setEquipmentState([...equipmentState, itemID]);
+			setIsChoiceVisible(false);
 		} else {
 			// Remove
 			setEquipmentState((current) =>
@@ -52,10 +56,12 @@ function Navigation(props) {
 					return item !== myItemID;
 				})
 			);
+			setIsChoiceVisible(false);
 		}
 	};
 
 	const handleClick = (e, action) => {
+		setIsChoiceVisible(true);
 		e.preventDefault();
 		manageEquipment(myItem[action].id);
 	};
@@ -82,8 +88,8 @@ function Navigation(props) {
 				<ul className="main-nav__ul">
 					{myPlace.choices &&
 						myPlace.choices.map((choice) => (
-							<li key={choice.id} className="main-nav__li">
-								<Link to="#" className="main-nav__ul__link" onClick={(e) => handleClick(e, choice.item - 1)}>
+							<li key={choice.id} className={`main-nav__li ${isChoiceVisible ? "" : "hideLink"}`}>
+								<Link to="#" className="main-nav__ul__link" onClick={(e) => handleClick(e, choice.item - 1)} disabled={!isChoiceVisible}>
 									{choice.id} - {choice.shortDesc} {choice.name} {choice.shortDescAfter}
 								</Link>
 							</li>
