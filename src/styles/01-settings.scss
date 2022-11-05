@@ -24,8 +24,7 @@ $space-xxs: toRem(2);
 $font-fallback-sansSerif: "helvetica, arial, sans serif"; 
 $font-fallback-serif: "times new roman, times, serif"; 
 $font-family-primary:"Lato", #{$font-fallback-sansSerif};
-$font-family-secondary: "Georgia", #{$font-fallback-serif};
-$font-family-tertiary: "Nunito", #{$font-fallback-sansSerif};
+$font-family-secondary: "Germania", #{$font-fallback-serif};
 
 $font-size-xl: toRem(28);
 $line-height-xl: toRem(32);
@@ -64,6 +63,7 @@ $max-width:toRem(700);
 $color-text: var(--color-text);
 $color-link: var(--color-link);
 $color-link-visited: var(--color-link-visited);
+$color-link-hover: var(--color-link-hover);
 $color-link-active: var(--color-link-active);
 
 $color-white: var(--color-white);
@@ -87,6 +87,13 @@ $color-secondary-l1: var(--color-secondary-l1);
 $color-secondary: var(--color-secondary);
 $color-secondary-d1: var(--color-secondary-d1);
 $color-secondary-d2: var(--color-secondary-d2);
+
+$color-tertiary-l3: var(--color-tertiary-l3);
+$color-tertiary-l2: var(--color-tertiary-l2);
+$color-tertiary-l1: var(--color-tertiary-l1);
+$color-tertiary: var(--color-tertiary);
+$color-tertiary-d1: var(--color-tertiary-d1);
+$color-tertiary-d2: var(--color-tertiary-d2);
 
 $color-success: var(--color-success);
 $color-warn: var(--color-warn);

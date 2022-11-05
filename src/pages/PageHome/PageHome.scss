@@ -1,2 +1,68 @@
 @use 'styles/01-settings' as *;
 @use 'styles/02-tools' as *;
+
+.cover-intro{
+    text-align:center; display:flex;  align-items:center; justify-content:center; height:calc(100vh - $space-xl);
+    .wrap{
+        position: relative; text-decoration: none; color:unset;
+        &.enterAnim .cover-intro__title:after{
+            animation:enterAnim 2s ease forwards;
+        }
+        &.exitAnim .cover-intro__title:after{
+            animation:exitAnim 2s ease forwards;
+        }
+    }
+}
+
+.cover-intro__title{
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    font-size:12rem; 
+    height:15rem;
+}
+
+.cover-intro__title:after{
+    content:"Deathswing";
+    display:flex; align-items:center; justify-content:left;
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 100%;
+    width:100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image:url(/assets/img/metal1.jpg);
+    background-size: cover;
+    pointer-events: auto;
+    cursor:pointer;
+    z-index:1;
+}
+
+.shadow{
+    position: absolute;    left:0;
+    top: 0;
+    font-size:12rem; 
+    height:15rem;
+    display:flex; align-items:center; justify-content:left;text-shadow: 0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+@keyframes enterAnim {
+    0% {background-position: 0 0; transform: rotate(0deg);}
+    100% {background-position: 0% 100%; transform: rotate(-3deg);}
+}
+
+@keyframes exitAnim {
+    0% {background-position: 0% 100%; transform: rotate(-3deg);}
+    100% {background-position: 0 0; transform: rotate(0deg);}
+}

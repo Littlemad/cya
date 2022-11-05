@@ -13,11 +13,11 @@
 
 .toggle__slider:before {
   content:""; position:absolute; height:16px; width:16px;
-  left:4px; bottom:4px; background-color:white; transition:.4s; border-radius: 50%;
+  left:4px; bottom:4px; background-color:$color-white; transition:.4s; border-radius:50%;
 }
 
 .toggle__input:checked + .toggle__slider {
-  background-color: $color-primary-l1;
+  background-color: $color-secondary-l1;
 }
 
 .toggle__input:focus + .toggle__slider {
@@ -26,4 +26,5 @@
 
 .toggle__input:checked + .toggle__slider:before {
   transform: translateX(22px);
+  background-color:$color-tertiary-d1;
 }

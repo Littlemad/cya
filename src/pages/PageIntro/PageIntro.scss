@@ -1,0 +1,7 @@
+@use 'styles/01-settings' as *;
+
+.intro-content{
+    background: linear-gradient(0deg, $color-tertiary-l3 35%, $color-tertiary-d2 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

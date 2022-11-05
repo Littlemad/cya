@@ -69,12 +69,20 @@
 .color-bg--secondary-l1{background:$color-secondary-l1;}
 .color-bg--secondary-l2{background:$color-secondary-l2;}
 
+.color-bg--tertiary-d2{background:$color-tertiary-d2;}
+.color-bg--tertiary-d1{background:$color-tertiary-d1;}
+.color-bg--tertiary{background:$color-tertiary;}
+.color-bg--tertiary-l1{background:$color-tertiary-l1;}
+.color-bg--tertiary-l2{background:$color-tertiary-l2;}
+.color-bg--tertiary-l3{background:$color-tertiary-l3;}
+
 .color-bg--success{background:$color-success;}
 .color-bg--warn{background:$color-warn;}
 .color-bg--fail{background:$color-fail;}
 
 .color-bg--link{background:$color-link;}
 .color-bg--link-visited{background:$color-link-visited;}
+.color-bg--link-hover{background:$color-link-hover;}
 .color-bg--link-active{background:$color-link-active;}
 
 // --TEXT COLORS
@@ -100,10 +108,18 @@
 .color-txt--secondary-l1{color:$color-secondary-l1;}
 .color-txt--secondary-l2{color:$color-secondary-l2;}
 
+.color-txt--tertiary-d2{color:$color-tertiary-d2;}
+.color-txt--tertiary-d1{color:$color-tertiary-d1;}
+.color-txt--tertiary{color:$color-tertiary;}
+.color-txt--tertiary-l1{color:$color-tertiary-l1;}
+.color-txt--tertiary-l2{color:$color-tertiary-l2;}
+.color-txt--tertiary-l3{color:$color-tertiary-l3;}
+
 .color-txt--success{color:$color-success;}
 .color-txt--warn{color:$color-warn;}
 .color-txt--fail{color:$color-fail;}
 
 .color-txt--link{color:$color-link;}
 .color-txt--link-visited{color:$color-link-visited;}
+.color-txt--link-hover{color:$color-link-hover;}
 .color-txt--link-active{color:$color-link-active;}
