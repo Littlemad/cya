@@ -4,7 +4,7 @@
 // GENERIC
 html{height:100%; overflow:hidden;}
 .body{
-    color:$color-text; min-height:100%; 
+    color:$color-text; min-height:100%; overflow:auto; height:100vh;
 	
     &:before{
         content: "";
@@ -38,7 +38,8 @@ a:active{color:$color-link-active;}
 .regular{font-weight:400;}
 strong, .bold{font-weight:bold;}
 em, .italic{font-style:italic;}
-p{margin-bottom:$space-s; max-width:$max-width;}
+p{margin-bottom:$space-m; max-width:$max-width;}
+.center{text-align:center;}
 
 .h1{font-size:$h1; line-height:$h1-line-height;}
 .h2{font-size:$h2; line-height:$h2-line-height;}

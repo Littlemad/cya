@@ -70,13 +70,13 @@ function Navigation(props) {
 		<>
 			<div className="main-ui grid grid--gap-l spacing">
 				<div className="main-content grid__col col1">
-					<h3 className="title h4">{myPlace.name}</h3>
+					<h3 className="title h2">{myPlace.name}</h3>
 					{myPlace.image && <img className="main-content__img" src={myPlace.image} alt={myPlace.imageAlt} />}
 					<p>{myPlace.longDesc}</p>
 				</div>
 				<div className="side-content grid__col col2">
 					<div className="inventory grid--pad-m">
-						<h3 className="title h4">Inventory</h3>
+						<h3 className="title h3">Inventory</h3>
 						<ul className="list">
 							<li>{coinState > 0 ? `A pouch with ${coinState} gold pieces` : `An empty pouch`}</li>
 							<li>{checkEquipment()}</li>

@@ -1,13 +1,31 @@
 @use 'styles/01-settings.scss' as *;
 
 .page{
+	position:relative;
 	min-height:100vh;
 	padding:$space-m; 
 	margin:auto; 
 	background:var(--bg-content);
 	box-shadow: 0px 0 35px 20px rgba(0, 0, 0, .65);
 	transition:.6s;
+	&:before, &:after{
+		position:absolute;
+		display:block;
+		content:"";	
+		width:10px;
+		height:100%;
+		top:0;
+		background:url(/assets/img/border1.gif) repeat-y;
+	}
+	&:before{
+		left:0;
+	}
+	&:after{
+		transform: rotate(180deg);
+		right:0;
+	}
 }
 
+.separator{display:block; margin:auto auto $space-m; background:url(/assets/img/separator.png) no-repeat; width:748px; height:60px;}
 
-.main-header{position:absolute; left:$space-l; display:flex; justify-content:space-between; align-items:center;}
+.main-header{position:absolute; top:$space-xl; left:$space-l; display:flex; justify-content:space-between; align-items:center;}

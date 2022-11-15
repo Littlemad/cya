@@ -8,7 +8,7 @@ $radius-box: 5px;
 .main-nav--active{border:2px solid red;}
 
 .highlight{font-style:italic;}
-.title{font-weight:bold; margin-bottom:$space-s;}
+.title{font-family:cardo; margin-bottom:$space-s;}
 .main-content__img{height:auto; max-height:toRem(250); margin-bottom:$space-m;}
 .inventory{
     border:1px solid $color-grey-l1; font-size:.9rem; border-radius:$radius-box;

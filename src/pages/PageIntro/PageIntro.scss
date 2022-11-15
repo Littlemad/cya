@@ -1,7 +1,29 @@
 @use 'styles/01-settings' as *;
 
-.intro-content{
-    background: linear-gradient(0deg, $color-tertiary-l3 35%, $color-tertiary-d2 65%);
+.img--border{border-radius:20px;}
+.par--center{margin:auto; max-width:52rem;}
+.intro-content{margin-bottom:$space-l;}
+.box-intro{border:1px solid white;}
+
+
+.gradient1{
+    color:#f8b700!important;
+    background: -webkit-linear-gradient(var(--color-text) 60%, #c00 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.separator{
+    background:red;
+    &:before, &:after{
+        content:"";
+        display: block;
+    }
+    &:before{
+        background:linear-gradient(270deg,#eccc8f 0,rgba(236,204,143,.3));
+    }
+    &:after{
+        background:linear-gradient(90deg,#eccc8f 0,rgba(236,204,143,.3));
+    }
+
 }

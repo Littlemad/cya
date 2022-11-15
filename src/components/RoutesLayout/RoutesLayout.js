@@ -25,10 +25,10 @@ const RoutesLayout = (props) => {
 
 	return (
 		<>
+			<header className="main-header">
+				<Toggle checked={props.checked} onChange={props.onChange} />
+			</header>
 			<div className="page">
-				<header className="main-header spacing">
-					<Toggle checked={props.checked} onChange={props.onChange} className="page__theme" />
-				</header>
 				<main className="main-content">
 					<Routes>
 						<Route path="/cyoa/" element={<PageHome />} />
@@ -40,12 +40,7 @@ const RoutesLayout = (props) => {
 					</Routes>
 				</main>
 				{/*
-				<header className="main-header spacing">
-					<div>
-						<h1 className="main-header__title h2">The sword that binds the soul</h1>
 						<h2 className="h5 color-txt--grey-d1">written, developed and designed by Alessio Carone</h2>
-					</div>
-				</header>
 	*/}
 			</div>
 		</>
