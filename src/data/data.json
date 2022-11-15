@@ -61,7 +61,7 @@
 	],
 	"links": [
 		{"value": "#00c", "themeDark": "#F8B700", "var": "link", "name": "Link"},
-		{"value": "#a4b", "themeDark": "#F8B700", "var": "link-visited", "name": "Link Visited"},
+		{"value": "#00c", "themeDark": "#F8B700", "var": "link-visited", "name": "Link Visited"},
 		{"value": "#a4b", "themeDark": "#fff", "var": "link-hover", "name": "Link Hover"},
 		{"value": "#c30", "var": "link-active", "name": "Link Active"}
 	],

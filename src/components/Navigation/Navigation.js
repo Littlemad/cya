@@ -70,7 +70,7 @@ function Navigation(props) {
 		<>
 			<div className="main-ui grid grid--gap-l spacing">
 				<div className="main-content grid__col col1">
-					<h3 className="title h2">{myPlace.name}</h3>
+					<h3 className="title h1">{myPlace.name}</h3>
 					{myPlace.image && <img className="main-content__img" src={myPlace.image} alt={myPlace.imageAlt} />}
 					<p>{myPlace.longDesc}</p>
 				</div>
@@ -84,7 +84,7 @@ function Navigation(props) {
 					</div>
 				</div>
 			</div>
-			<nav className="main-nav box">
+			<nav className="main-nav grid--pad-m">
 				<ul className="main-nav__ul">
 					{myPlace.choices &&
 						myPlace.choices.map((choice) => (

@@ -5,7 +5,7 @@
 .intro-content{margin-bottom:$space-l;}
 .box-intro{border:1px solid white;}
 
-
+// Blood Gradient
 .gradient1{
     color:#f8b700!important;
     background: -webkit-linear-gradient(var(--color-text) 60%, #c00 80%);
@@ -14,16 +14,5 @@
 }
 
 .separator{
-    background:red;
-    &:before, &:after{
-        content:"";
-        display: block;
-    }
-    &:before{
-        background:linear-gradient(270deg,#eccc8f 0,rgba(236,204,143,.3));
-    }
-    &:after{
-        background:linear-gradient(90deg,#eccc8f 0,rgba(236,204,143,.3));
-    }
-
+    transform: scale(.75);
 }

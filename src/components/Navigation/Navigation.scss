@@ -2,16 +2,19 @@
 @use 'styles/02-tools' as *;
 @use "styles/grid-system" as *;
 
-
-$radius-box: 5px;
-
 .main-nav--active{border:2px solid red;}
-
 .highlight{font-style:italic;}
 .title{font-family:cardo; margin-bottom:$space-s;}
 .main-content__img{height:auto; max-height:toRem(250); margin-bottom:$space-m;}
+.main-nav, .inventory{
+    background:var(--main-nav-bg); 
+    text-shadow:0 0 1px transparent, 0 1px 2px var(--color-text-shadow);
+    border-radius:5px; 
+    border:2px solid var(--main-nav-border);
+    box-shadow:0 0 2px var(--main-nav-shadow);
+}
 .inventory{
-    border:1px solid $color-grey-l1; font-size:.9rem; border-radius:$radius-box;
+    font-size:.9rem; position:relative;
     .list{margin-top:$space-m;}
 }
 .main-ui{
@@ -19,12 +22,6 @@ $radius-box: 5px;
     .col1{@include col-size-8;}
     .col2{@include col-size-4;}
 }
-
-.main-nav, .inventory{
-    background:var(--main-nav-bg); border-radius:$radius-box;
-    text-shadow:0 0 1px transparent, 0 1px 2px rgb(0 0 0 / 80%);
-}
-
 .hideLink{
     animation:hideLinkAnim .6s 1 ease-out forwards;
     pointer-events: none;

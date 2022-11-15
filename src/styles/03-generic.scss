@@ -35,20 +35,26 @@ html{box-sizing: border-box;}
     --bg: var(--color-grey-l2);
     --bg-content: var(--color-tertiary-l3);
     --color-text: var(--color-lightTheme-text);
+    --color-text-shadow: transparent;
     --color-link: var(--color-lightTheme-link);
     --color-link-visited: var(--color-lightTheme-link-visited);
     --color-link-hover: var(--color-lightTheme-link-hover);
-	--main-nav-bg: var(--color-tertiary-d2);
+	--main-nav-bg: var(--color-white);
+	--main-nav-border: var(--color-white);
+	--main-nav-shadow: var(--color-black);
 }
 
 [data-theme="dark"] {
     --bg: var(--color-grey-d2);
     --bg-content: var(--color-tertiary-d2);
     --color-text: var(--color-darkTheme-text);
+    --color-text-shadow: rgb(0 0 0 / 80%);
     --color-link: var(--color-darkTheme-link);
     --color-link-visited: var(--color-darkTheme-link-visited);
     --color-link-hover: var(--color-darkTheme-link-hover);
 	--main-nav-bg: var(--color-tertiary-d1);
+	--main-nav-border: var(--color-black);
+	--main-nav-shadow: var(--color-white);
 }
 
 /* PrismJS 1.23.0
