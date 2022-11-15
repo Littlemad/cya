@@ -3,6 +3,7 @@ import {Routes, Route} from "react-router-dom";
 import PageHome from "pages/PageHome/PageHome";
 import PageIntro from "pages/PageIntro/PageIntro";
 import PageAdventure from "pages/PageAdventure/PageAdventure";
+import PageGameInfo from "pages/PageGameInfo/PageGameInfo";
 import dataJSON from "data/data.json";
 
 import Navigation from "components/Navigation/Navigation";
@@ -32,16 +33,14 @@ const RoutesLayout = (props) => {
 				<main className="main-content">
 					<Routes>
 						<Route path="/cyoa/" element={<PageHome />} />
-						<Route path="/cyoa/1" element={<PageIntro />} />
-						<Route path="/cyoa/2" element={<PageAdventure />} />
+						<Route path="/cyoa/intro" element={<PageIntro />} />
+						<Route path="/cyoa/game-info" element={<PageGameInfo />} />
+						<Route path="/cyoa/start" element={<PageAdventure />} />
 						{pageNumbers.map((number) => (
 							<Route key={number} path={`/cyoa/page${number}`} element={<Page number={number} />} />
 						))}
 					</Routes>
 				</main>
-				{/*
-						<h2 className="h5 color-txt--grey-d1">written, developed and designed by Alessio Carone</h2>
-	*/}
 			</div>
 		</>
 	);

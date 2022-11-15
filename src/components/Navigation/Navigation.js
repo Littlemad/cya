@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import {NavLink, Link} from "react-router-dom";
 import "./Navigation.scss";
 import dataJSON from "data/data.json";
@@ -66,6 +66,28 @@ function Navigation(props) {
 		manageEquipment(myItem[action].id);
 	};
 
+	/* KEYPRESS events */
+
+	/*	
+	const handleKeyPress = useCallback((event) => {
+		// Call updateCalc here
+		console.log(`Key pressed: ${event.key}`);
+
+		if (event.key === "1") {
+			console.log("miao");
+		}
+	}, []);
+
+	useEffect(() => {
+		// attach the event listener
+		document.addEventListener("keydown", handleKeyPress);
+
+		// remove the event listener
+		return () => {
+			document.removeEventListener("keydown", handleKeyPress);
+		};
+	}, [handleKeyPress]);
+*/
 	return (
 		<>
 			<div className="main-ui grid grid--gap-l spacing">

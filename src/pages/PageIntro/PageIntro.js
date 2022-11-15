@@ -18,7 +18,7 @@ function PageIntro() {
 					This is the story on how all did go terribly, terribly wrong just to save a life.
 				</p>
 				<div className="separator"></div>
-				<p className="par--center">
+				<p className="par--center spacing">
 					This is a choose your own adventure game.
 					<br />
 					You will have many choices, each one will lead to various consequences.
@@ -27,7 +27,14 @@ function PageIntro() {
 					<br />
 					Maybe you will even able to redeem Leo damned soul.
 				</p>
-				<Link to={`/cyoa/2`}>I am ready to go adventuring!!!</Link>
+				<Link className="h3" to={`/cyoa/start`}>
+					I am ready to go adventuring!!!
+				</Link>
+				<br />
+				<br />
+				<Link className="" to={`/cyoa/game-info`}>
+					I would like to know more about the game.
+				</Link>
 			</div>
 		</>
 	);

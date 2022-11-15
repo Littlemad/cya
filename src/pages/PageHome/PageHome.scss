@@ -39,7 +39,8 @@
 }
 
 .shadow{
-    position: absolute;    left:0;
+    position: absolute;    
+    left:0;
     top: 0;
     font-size:12rem; 
     height:15rem;
@@ -66,3 +67,4 @@
     0% {background-position: 0% 100%; transform: rotate(-3deg);}
     100% {background-position: 0 0; transform: rotate(0deg);}
 }
+.intro-notes{position:absolute; top:$space-m; left:0; text-align:center; width:100%; color:$color-grey-d1; font-size:small;}
