@@ -5,15 +5,15 @@
 .main-nav--active{border:2px solid red;}
 .highlight{font-style:italic;}
 .title{font-family:cardo; margin-bottom:$space-s;}
-.main-content__img{height:auto; max-height:toRem(250); margin-bottom:$space-m;}
-.main-nav, .inventory{
+.main-content__img{height:auto; max-height:toRem(380); margin-bottom:$space-m;}
+.main-nav, .inventory, .character{
     background:var(--main-nav-bg); 
     text-shadow:0 0 1px transparent, 0 1px 2px var(--color-text-shadow);
     border-radius:5px; 
     border:2px solid var(--main-nav-border);
     box-shadow:0 0 2px var(--main-nav-shadow);
 }
-.inventory{
+.inventory, .character{
     font-size:.9rem; position:relative;
     .list{margin-top:$space-m;}
 }

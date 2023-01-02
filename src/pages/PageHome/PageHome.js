@@ -5,18 +5,31 @@ import "./PageHome.scss";
 function Home() {
 	const [isHovering, setIsHovering] = useState(false);
 
+	const audioSword = new Audio("./sound/sword.mp3");
+	const audioSlash = new Audio("./sound/slash.mp3");
+
 	const handleMouseOver = () => {
-		setIsHovering(true);
+		const hoverSound = () => {
+			audioSword.play();
+		};
+		if (!isHovering) {
+			setIsHovering(true);
+			hoverSound();
+		}
 	};
 
 	const handleMouseOut = () => {
 		setIsHovering(false);
 	};
 
+	const clickSlash = () => {
+		audioSlash.play();
+	};
+
 	return (
 		<>
 			<div className="cover-intro germania">
-				<Link to={`/cyoa/intro`} className={`wrap ${isHovering ? "enterAnim" : "exitAnim"}`} onMouseOver={handleMouseOver} onMouseOut={() => setTimeout(handleMouseOut, 1100)}>
+				<Link to={`/cyoa/intro`} className={`wrap ${isHovering ? "enterAnim" : "exitAnim"}`} onMouseOver={handleMouseOver} onMouseOut={() => setTimeout(handleMouseOut, 800)} onClick={clickSlash}>
 					<h1 className="cover-intro__title">Deathswing</h1>
 					<span className="shadow">Deathswing</span>
 				</Link>

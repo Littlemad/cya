@@ -90,13 +90,46 @@ function Navigation(props) {
 */
 	return (
 		<>
+			<h3 className="title h1">{myPlace.name}</h3>
 			<div className="main-ui grid grid--gap-l spacing">
 				<div className="main-content grid__col col1">
-					<h3 className="title h1">{myPlace.name}</h3>
 					{myPlace.image && <img className="main-content__img" src={myPlace.image} alt={myPlace.imageAlt} />}
 					<p>{myPlace.longDesc}</p>
+
+					<nav className="main-nav grid--pad-m">
+						<ul className="main-nav__ul">
+							{myPlace.choices &&
+								myPlace.choices.map((choice) => (
+									<li key={choice.id} className={`main-nav__li ${isChoiceVisible ? "" : "hideLink"}`}>
+										<Link to="#" className="main-nav__ul__link" onClick={(e) => handleClick(e, choice.item - 1)} disabled={!isChoiceVisible}>
+											{choice.id} - {choice.shortDesc} {choice.name} {choice.shortDescAfter}
+										</Link>
+									</li>
+								))}
+
+							{myPlace.locationConnection &&
+								myPlace.locationConnection.map((place) => {
+									const myNearbyPlace = dataJSON.locations[place - 1];
+									const myPos = myPlace.locationConnection.indexOf(place) + 1;
+
+									return (
+										<li key={`key${place}`} className="main-nav__li">
+											<NavLink to={`/cyoa/page${place}`}>
+												{hasChoice + myPos} - {myNearbyPlace.shortDesc} <span className="highlight">{myNearbyPlace.name}</span>
+											</NavLink>
+										</li>
+									);
+								})}
+						</ul>
+					</nav>
 				</div>
 				<div className="side-content grid__col col2">
+					<div className="character grid--pad-m spacing">
+						<h3 className="title h3">Character</h3>
+						<strong>Mood:</strong> &nbsp;Vigilant
+						<br />
+						<strong>Class:</strong> &nbsp;Undefined
+					</div>
 					<div className="inventory grid--pad-m">
 						<h3 className="title h3">Inventory</h3>
 						<ul className="list">
@@ -106,32 +139,6 @@ function Navigation(props) {
 					</div>
 				</div>
 			</div>
-			<nav className="main-nav grid--pad-m">
-				<ul className="main-nav__ul">
-					{myPlace.choices &&
-						myPlace.choices.map((choice) => (
-							<li key={choice.id} className={`main-nav__li ${isChoiceVisible ? "" : "hideLink"}`}>
-								<Link to="#" className="main-nav__ul__link" onClick={(e) => handleClick(e, choice.item - 1)} disabled={!isChoiceVisible}>
-									{choice.id} - {choice.shortDesc} {choice.name} {choice.shortDescAfter}
-								</Link>
-							</li>
-						))}
-
-					{myPlace.locationConnection &&
-						myPlace.locationConnection.map((place) => {
-							const myNearbyPlace = dataJSON.locations[place - 1];
-							const myPos = myPlace.locationConnection.indexOf(place) + 1;
-
-							return (
-								<li key={`key${place}`} className="main-nav__li">
-									<NavLink to={`/cyoa/page${place}`}>
-										{hasChoice + myPos} - {myNearbyPlace.shortDesc} <span className="highlight">{myNearbyPlace.name}</span>
-									</NavLink>
-								</li>
-							);
-						})}
-				</ul>
-			</nav>
 		</>
 	);
 }

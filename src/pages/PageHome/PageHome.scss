@@ -6,10 +6,10 @@
     .wrap{
         position: relative; text-decoration: none; color:unset;
         &.enterAnim .cover-intro__title:after{
-            animation:enterAnim 2s ease forwards;
+            animation:enterAnim 1.5s ease forwards;
         }
         &.exitAnim .cover-intro__title:after{
-            animation:exitAnim 2s ease forwards;
+            animation:exitAnim 1s ease forwards;
         }
     }
 }
