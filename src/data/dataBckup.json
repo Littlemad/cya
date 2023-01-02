@@ -1,0 +1,17 @@
+{
+    "id": "0",
+    "image": "https://i.pinimg.com/originals/58/27/3e/58273e1c7ad45a72da84155b976c9016.jpg",
+    "imageAlt": "xxx",
+    "name": "A dark alley",
+    "longDesc1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "longDesc2": "test longDesc2",
+    "enterDesc": "Walk through the",
+    "url": "/cyoa/page1",
+    "locationConnection": [2, 3],
+    "choices": [
+        {"id": 1, "enterDesc": "Buy ", "name": "a sharp sword", "enterDescAfter": "for 10 coins", "item": [1]},
+        {"id": 2, "enterDesc": "Steal ", "name": "the ornate dagger", "item": [2], "consequences": [1]},
+        {"id": 3, "enterDesc": "Trade some magical essence for", "name": "an ancient book", "enterDescAfter": "and some coins", "item": [3]},
+        {"id": 4, "enterDesc": "Use the spell found in", "name": "an ancient book", "item": [4]}
+    ]
+},

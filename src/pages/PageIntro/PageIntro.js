@@ -20,7 +20,9 @@ function PageIntro() {
 				</p>
 				<div className="separator"></div>
 				<p className="par--center spacing">
-					This is a choose your own adventure game. You will have many choices, each one will lead to various consequences.
+					This is a choose your own adventure game.
+					<br />
+					You will have many choices, each one will lead to various consequences.
 					<br />
 					You will have to survive against many perils to reach the end of your journey.
 					<br />

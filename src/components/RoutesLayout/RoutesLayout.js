@@ -30,7 +30,7 @@ const RoutesLayout = (props) => {
 				<Toggle checked={props.checked} onChange={props.onChange} />
 			</header>
 			<div className="page">
-				<main className="main-content">
+				<main className="content">
 					<Routes>
 						<Route path="/cyoa/" element={<PageHome />} />
 						<Route path="/cyoa/intro" element={<PageIntro />} />

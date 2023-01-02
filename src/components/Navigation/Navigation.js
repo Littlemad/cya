@@ -110,7 +110,9 @@ function Navigation(props) {
 			<h3 className="title h1">{myPlace.name}</h3>
 			<div className="main-ui grid grid--gap-l spacing">
 				<div className="main-content grid__col col1">
-					{myPlace.image && <img className="main-content__img" src={myPlace.image} alt={myPlace.imageAlt} />}
+					{myPlace.image2 && <img className="main-content__img pos-absolute main-content__img-2" src={myPlace.image2} alt={myPlace.imageAlt2} />}
+					{myPlace.image3 && <img className="main-content__img pos-absolute main-content__img-3" src={myPlace.image3} alt={myPlace.imageAlt3} />}
+					{myPlace.image1 && <img className="main-content__img" src={myPlace.image1} alt={myPlace.imageAlt1} />}
 					<p>{myPlace.longDesc1}</p>
 					{myPlace.longDesc2 && <p>{myPlace.longDesc2}</p>}
 					{myPlace.longDesc3 && <p>{myPlace.longDesc3}</p>}
@@ -135,7 +137,7 @@ function Navigation(props) {
 									return (
 										<li key={`key${place}`} className="main-nav__li">
 											<NavLink to={`/cyoa/page${place}`} className={`main-nav__link-${myLinkNumID}`}>
-												{hasChoice + myPos} - {myNearbyPlace.enterDesc} <span className="highlight">{myNearbyPlace.name}</span>
+												{hasChoice + myPos} - {myNearbyPlace.enterDesc} <span className="highlight">{myNearbyPlace.name}</span> {myNearbyPlace.enterDescAfter}
 											</NavLink>
 										</li>
 									);
@@ -145,6 +147,7 @@ function Navigation(props) {
 				</div>
 				<div className="side-content grid__col col2">
 					<div className="character grid--pad-m spacing">
+						<div className="character__avatar"></div>
 						<h3 className="title h3">Character</h3>
 						<strong>Mood:</strong> &nbsp;Vigilant
 						<br />

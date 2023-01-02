@@ -5,7 +5,12 @@
 .main-nav--active{border:2px solid red;}
 .highlight{font-style:italic;}
 .title{font-family:cardo; margin-bottom:$space-s;}
-.main-content__img{height:auto; max-height:toRem(380); margin-bottom:$space-m;}
+.h1.title{margin-bottom:$space-m;}
+// .main-content{overflow:hidden;}
+.main-content__img{height:auto; max-height:toRem(500); margin-bottom:$space-m;}
+
+.main-content__img-2, .main-content__img-3{opacity:0;}
+
 .main-nav, .inventory, .character{
     background:var(--main-nav-bg); 
     text-shadow:0 0 1px transparent, 0 1px 2px var(--color-text-shadow);
@@ -22,6 +27,14 @@
     .col1{@include col-size-8;}
     .col2{@include col-size-4;}
 }
+
+.character__avatar{
+    position:absolute; border-radius:5px; top:-32px; right:15px; width:toRem(80); height:toRem(80);
+    background:url(./../../../public/img/intro/leo-with-sword.jpg) center -80px no-repeat;
+    border:2px solid var(--main-nav-border); 
+    box-shadow:0 0 3px var(--main-nav-shadow), 0 0 15px var(--main-nav-border), 0 0 10px var(--main-nav-border);
+}
+
 .hideLink{
     animation:hideLinkAnim .6s 1 ease-out forwards;
     pointer-events: none;

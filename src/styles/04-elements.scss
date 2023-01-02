@@ -93,6 +93,9 @@ select{
     }
 }
 
+// POSITION
+.pos-absolute{position:absolute;}
+
 [data-theme="dark"] {
     .table{
         border-color:$color-white;
