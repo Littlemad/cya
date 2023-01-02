@@ -55,7 +55,7 @@ p{margin-bottom:$space-m; max-width:$max-width;}
 code{font-family: Consolas,"courier new";}
 
 // SPACING
-.spacing{margin-bottom:$space-xl;}
+html .spacing{margin-bottom:$space-xl;}
 
 // PADDING
 .padding-xxl{padding:$space-xxl;}
@@ -77,6 +77,9 @@ select{
     width:100%; border:3px solid;
     td, th{padding:$space-s;}
 }
+
+// ANCHOR
+.pos-top{position:absolute; top:0;} 
 
 // TABLE
 :root { // light theme default

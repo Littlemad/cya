@@ -21,7 +21,12 @@ function Home() {
 					<span className="shadow">Deathswing</span>
 				</Link>
 			</div>
-			<div className="intro-notes">Written, developed and designed by Alessio Carone</div>
+			<div className="intro-notes">
+				Written, developed and designed by&nbsp;
+				<a href="https://www.twitch.tv/little2mad" target="_blank" rel="noreferrer">
+					Little2mad
+				</a>
+			</div>
 		</>
 	);
 }

@@ -1,7 +1,10 @@
 @use 'styles/01-settings' as *;
 
 .img--border{border-radius:20px;}
-.par--center{margin:auto; max-width:52rem;}
+.par--center{
+    margin:auto; max-width:$max-width;
+    p{max-width:$max-width;}
+}
 .intro-content{margin-bottom:$space-l;}
 .box-intro{border:1px solid white;}
 
