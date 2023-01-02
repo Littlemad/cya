@@ -6,6 +6,16 @@ import dataJSON from "data/data.json";
 function Navigation(props) {
 	const myPlace = dataJSON.locations[props.room - 1];
 	const hasChoice = (myPlace.choices && myPlace.choices.length) || 0;
+	let myChoicesLength = 0;
+	let myLocationLength = 0;
+
+	if (myPlace.choices) {
+		myChoicesLength = myPlace.choices.length;
+	}
+
+	if (myPlace.locationConnection) {
+		myLocationLength = myPlace.locationConnection.length;
+	}
 
 	const myItem = dataJSON.items;
 
@@ -61,22 +71,29 @@ function Navigation(props) {
 	};
 
 	const handleClick = (e, action) => {
-		setIsChoiceVisible(true);
-		e.preventDefault();
-		manageEquipment(myItem[action].id);
+		// check if other choices were being selected
+		if (isChoiceVisible) {
+			setIsChoiceVisible(true);
+			e.preventDefault();
+			manageEquipment(myItem[action].id);
+		}
 	};
 
 	/* KEYPRESS events */
 
-	/*	
 	const handleKeyPress = useCallback((event) => {
-		// Call updateCalc here
-		console.log(`Key pressed: ${event.key}`);
+		// console.log(`Key pressed: ${event.key}`);
 
-		if (event.key === "1") {
-			console.log("miao");
-		}
-	}, []);
+		const myLength = myChoicesLength + myLocationLength + 1;
+
+		let i = 1;
+		do {
+			if (event.key === i.toString()) {
+				document.getElementsByClassName("main-nav__link-" + i)[0].click();
+			}
+			i++;
+		} while (i <= myLength);
+	});
 
 	useEffect(() => {
 		// attach the event listener
@@ -87,7 +104,7 @@ function Navigation(props) {
 			document.removeEventListener("keydown", handleKeyPress);
 		};
 	}, [handleKeyPress]);
-*/
+
 	return (
 		<>
 			<h3 className="title h1">{myPlace.name}</h3>
@@ -103,7 +120,7 @@ function Navigation(props) {
 							{myPlace.choices &&
 								myPlace.choices.map((choice) => (
 									<li key={choice.id} className={`main-nav__li ${isChoiceVisible ? "" : "hideLink"}`}>
-										<Link to="#" className="main-nav__ul__link" onClick={(e) => handleClick(e, choice.item - 1)} disabled={!isChoiceVisible}>
+										<Link to="#" className={`main-nav__link main-nav__link-${choice.id}`} onClick={(e) => handleClick(e, choice.item - 1)} disabled={!isChoiceVisible}>
 											{choice.id} - {choice.enterDesc} {choice.name} {choice.enterDescAfter}
 										</Link>
 									</li>
@@ -113,10 +130,11 @@ function Navigation(props) {
 								myPlace.locationConnection.map((place) => {
 									const myNearbyPlace = dataJSON.locations[place - 1];
 									const myPos = myPlace.locationConnection.indexOf(place) + 1;
+									const myLinkNumID = myPos + myChoicesLength;
 
 									return (
 										<li key={`key${place}`} className="main-nav__li">
-											<NavLink to={`/cyoa/page${place}`}>
+											<NavLink to={`/cyoa/page${place}`} className={`main-nav__link-${myLinkNumID}`}>
 												{hasChoice + myPos} - {myNearbyPlace.enterDesc} <span className="highlight">{myNearbyPlace.name}</span>
 											</NavLink>
 										</li>
