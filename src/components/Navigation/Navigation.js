@@ -94,15 +94,17 @@ function Navigation(props) {
 			<div className="main-ui grid grid--gap-l spacing">
 				<div className="main-content grid__col col1">
 					{myPlace.image && <img className="main-content__img" src={myPlace.image} alt={myPlace.imageAlt} />}
-					<p>{myPlace.longDesc}</p>
-
+					<p>{myPlace.longDesc1}</p>
+					{myPlace.longDesc2 && <p>{myPlace.longDesc2}</p>}
+					{myPlace.longDesc3 && <p>{myPlace.longDesc3}</p>}
+					{myPlace.longDesc4 && <p>{myPlace.longDesc4}</p>}
 					<nav className="main-nav grid--pad-m">
 						<ul className="main-nav__ul">
 							{myPlace.choices &&
 								myPlace.choices.map((choice) => (
 									<li key={choice.id} className={`main-nav__li ${isChoiceVisible ? "" : "hideLink"}`}>
 										<Link to="#" className="main-nav__ul__link" onClick={(e) => handleClick(e, choice.item - 1)} disabled={!isChoiceVisible}>
-											{choice.id} - {choice.shortDesc} {choice.name} {choice.shortDescAfter}
+											{choice.id} - {choice.enterDesc} {choice.name} {choice.enterDescAfter}
 										</Link>
 									</li>
 								))}
@@ -115,7 +117,7 @@ function Navigation(props) {
 									return (
 										<li key={`key${place}`} className="main-nav__li">
 											<NavLink to={`/cyoa/page${place}`}>
-												{hasChoice + myPos} - {myNearbyPlace.shortDesc} <span className="highlight">{myNearbyPlace.name}</span>
+												{hasChoice + myPos} - {myNearbyPlace.enterDesc} <span className="highlight">{myNearbyPlace.name}</span>
 											</NavLink>
 										</li>
 									);

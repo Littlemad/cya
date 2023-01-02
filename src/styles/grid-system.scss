@@ -81,9 +81,10 @@
 }
 
 @media screen and (max-width: 767px) {
-    .grid__col{grid-column:span 6!important;}
+    .grid__col{grid-column:span 12!important;}
 }
-
+/*
 @media screen and (max-width: 575px) {
     .grid__col{grid-column:span 12!important;}
 }
+*/

@@ -1,24 +1,29 @@
 @use '01-settings' as *;
-
+@use 'styles/02-tools' as *;
 
 // MIN WIDTH
+/*
 @media only screen and (min-width: $break-mobile-s){ // 480px
 }
-
+*/
 @media only screen and (min-width: $break-mobile){ // 576px
     .page{width:$break-mobile; padding:$space-xl;}
+    .main-content__img{max-width:toRem(512);}
 }
 
 @media only screen and (min-width: $break-tablet-potrait){ // 768px
     .page{width:$break-tablet-potrait;}
+    .main-content__img{max-width:toRem(460);}
 }
 
 @media only screen and (min-width: $break-tablet-landscape){ // 992px
     .page{width:$break-tablet-landscape;}
+    .main-content__img{max-width:toRem(610);}
 }
 
 @media only screen and (min-width: $break-desktop){ // 1200px
     .page{width:$break-desktop;}
+    .main-content__img{max-width:unset;}
 }
 
 // MAX WIDTH
