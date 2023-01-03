@@ -19,8 +19,8 @@ function Navigation(props) {
 
 	const myItem = dataJSON.items;
 
-	const initialArray = [];
-	const initialCoin = 20;
+	const initialArray = [1];
+	const initialCoin = 50;
 
 	const [equipmentState, setEquipmentState] = useState(initialArray);
 	const [coinState, setCoinState] = useState(initialCoin);
@@ -117,6 +117,7 @@ function Navigation(props) {
 					{myPlace.longDesc2 && <p>{myPlace.longDesc2}</p>}
 					{myPlace.longDesc3 && <p>{myPlace.longDesc3}</p>}
 					{myPlace.longDesc4 && <p>{myPlace.longDesc4}</p>}
+					{myPlace.longDesc5 && <p>{myPlace.longDesc5}</p>}
 					<nav className="main-nav grid--pad-m">
 						<ul className="main-nav__ul">
 							{myPlace.choices &&

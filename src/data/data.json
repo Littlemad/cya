@@ -96,12 +96,13 @@
 			"image1": "img/day1/dark-alley1.jpg",
 			"imageAlt1": "xxx",
 			"name": "A dark alley",
-			"longDesc1": "Leo was walking alone in the dark alleys of the city of Malakan humming an old mantra learned during his youth as beggar of these streets. He was known in the streets to not be disturbed by any cutpurse when he was walking around the city, especially when on business. Even so he was feeling that something was off, and the mantra was helping him to keep busy that part of the brain that was telling him to watch his own shadow.",
-			"longDesc2": "He was not followed, and neither was following anyone other than his lonley thoughts. It was just another sunday morning returning from his last job looking for tiring himself before returning to his cove and sleep. The job was too easy but his instict had kicked in anyway and sleeping was a long hours away from him. A bit of physical excersize should help himself out.",
-			"longDesc3": "Even so his nose must have picked something because he quickly realised that a scent that wasn't part of these alley was slowly intensifying in the air...",
+			"longDesc1": "Leo was walking alone in the dark alleys of the city of Malakan humming an old mantra learned during his youth as a beggar on these streets. He was known in the streets to not be disturbed by any cutpurse when he was walking around the city, especially when on business. Even so he was feeling that today something was off, and the mantra was helping him to keep busy that part of the brain that was telling him to watch his own shadow, so he could think about the whole situation.",
+			"longDesc2": "He was not followed, and neither was following anyone other than his lonely thoughts. It was just another sunday morning returning from his last job trying to tire himself before returning to his apartment and sleeping. The job was too easy but his instinct and adrenaline had kicked in anyway and sleeping was a long hours away from him. Physical exercise it was what usually helped him to calm and expunge the extra energy.",
+			"longDesc3": "Even so his nose must have picked something because he quickly realised that a scent that wasn't part of these alleys was slowly intensifying in the air.",
+			"longDesc4": "[In this adventure you are Leo, and it is time to make the first of many decisions that will lead you to your destiny... or premature death.]",
 			"enterDesc": "Walk through the",
 			"url": "/cyoa/page1",
-			"locationConnection": [2, 3]
+			"locationConnection": [2, 5]
 		},
 		{
 			"id": 2,
@@ -109,8 +110,8 @@
 			"imageAlt1": "alt 2",
 			"name": "More dark alleys",
 			"enterDesc": "Keep walking along",
-			"longDesc1": "You keep walking for another hour. You fasten your steps, but the scent never really leaves you, or neither it does intensify. You try to hear sounds, or the catch the movement of some shadow that might direct you towards what might be nearby, but seems that all the senses apart from your smell is betraying you.",
-			"longDesc2": "This means only one other thing and you hope that you are wrong (and usually you never are when is about recognising trouble).",
+			"longDesc1": "You keep walking for another hour. You fasten your steps, but the scent never really leaves you, or neither does it intensify. You try to hear sounds, or catch the movement of some shadow that might direct you towards what might be nearby, but seems that all the senses apart from your smell is betraying you.",
+			"longDesc2": "This means only one other thing and you hope that you are wrong (and usually you never are when it is about recognising trouble).",
 			"longDesc3": "“Magic” you whisper to yourself “someone is trying to...”",
 			"url": "/cyoa/page2",
 			"locationConnection": [4, 3]
@@ -118,35 +119,47 @@
 		{
 			"id": 3,
 			"image1": "img/day1/dark-alley1.jpg",
+			"imageAlt1": "alt",
+			"name": "At the unusual Dark Alley",
+			"longDesc1": "longdesk 3",
+			"enterDesc": "Stop",
+			"enterDescAfter": "xxx",
+			"url": "/cyoa/page3",
+			"locationConnection": [1]
+		},
+		{
+			"id": 4,
+			"image1": "img/day1/dark-alley1.jpg",
+			"imageAlt1": "alt",
+			"name": "The Darkest of the alleys",
+			"longDesc1": "longdesk 4",
+			"enterDesc": "Run silently towards the",
+			"url": "/cyoa/page4",
+			"locationConnection": [6, 5]
+		},
+		{
+			"id": 5,
+			"image1": "img/day1/dark-alley1.jpg",
 			"image2": "img/day1/dark-alley2.jpg",
 			"image3": "img/day1/dark-alley3.jpg",
 			"imageAlt1": "alt",
 			"name": "At the unusual Dark Alley",
 			"longDesc1": "longdesk 3",
 			"enterDesc": "Stop",
-			"enterDescAfter": "where you first picked theup the scent",
+			"enterDescAfter": "where you first picked theup the scent and investigate",
 			"url": "/cyoa/page3",
-			"locationConnection": [1]
+			"locationConnection": [6]
 		},
 		{
-			"id": 4,
-			"image1": "https://www.alro-group.com/wp-content/uploads/2014/12/placeholder-1024x640.jpg",
+			"id": 6,
+			"image1": "img/day1/dark-alley1.jpg",
 			"imageAlt1": "alt",
-			"name": "The Darkest of the alleys",
-			"longDesc1": "longdesk 4",
-			"enterDesc": "Run silently towards the",
-			"url": "/cyoa/page4",
-			"locationConnection": [1, 5]
-		},
-		{
-			"id": 5,
-			"image1": "https://www.alro-group.com/wp-content/uploads/2014/12/placeholder-1024x640.jpg",
-			"imageAlt1": "alt",
-			"name": "ID 5",
-			"longDesc1": "Longdesc 5",
-			"enterDesc": "Enter in",
-			"url": "/cyoa/page5",
-			"locationConnection": [1]
+			"name": "yyy",
+			"longDesc1": "longdesk 3",
+			"enterDesc": "zzz",
+			"enterDescAfter": "xxx",
+			"url": "/cyoa/page3",
+			"locationConnection": [6]
 		}
 	],
 	"consequences": [
