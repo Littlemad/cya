@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import importAudioSword from "./../../assets/sound/sword.mp3";
 import importAudioSlash from "./../../assets/sound/slash.mp3";
@@ -28,15 +28,6 @@ function Home() {
 		setIsHovering(false);
 	};
 
-	// Allow to make a start interaction with the page and allow the sound to be played
-	useEffect(() => {
-		return () => {
-			if (document.getElementById("startButton")) {
-				document.getElementById("startButton").click();
-			}
-		};
-	}, []);
-
 	return (
 		<>
 			<div className="cover-intro germania">
@@ -51,7 +42,6 @@ function Home() {
 					Little2mad
 				</a>
 			</div>
-			<button id="startButton" className="hide"></button>
 		</>
 	);
 }

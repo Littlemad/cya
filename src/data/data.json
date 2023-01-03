@@ -69,24 +69,12 @@
 		{
 			"id": 1,
 			"name": "A sharp sword",
-			"own": true,
-			"buy": 10
-		},
-		{
-			"id": 2,
-			"name": "An ornate dagger",
 			"own": true
 		},
 		{
-			"id": 3,
-			"name": "An ancient book",
-			"own": true,
-			"sell": 5
-		},
-		{
-			"id": 4,
-			"name": "An ancient book",
-			"own": false
+			"id": 2,
+			"name": "A rock",
+			"own": true
 		}
 	],
 
@@ -97,12 +85,12 @@
 			"imageAlt1": "xxx",
 			"name": "A dark alley",
 			"longDesc1": "Leo was walking alone in the dark alleys of the city of Malakan humming an old mantra learned during his youth as a beggar on these streets. He was known in the streets to not be disturbed by any cutpurse when he was walking around the city, especially when on business. Even so he was feeling that today something was off, and the mantra was helping him to keep busy that part of the brain that was telling him to watch his own shadow, so he could think about the whole situation.",
-			"longDesc2": "He was not followed, and neither was following anyone other than his lonely thoughts. It was just another sunday morning returning from his last job trying to tire himself before returning to his apartment and sleeping. The job was too easy but his instinct and adrenaline had kicked in anyway and sleeping was a long hours away from him. Physical exercise it was what usually helped him to calm and expunge the extra energy.",
+			"longDesc2": "He was not followed, and neither was following anyone other than his lonely thoughts. It was just another sunday morning returning from his last job trying to tire himself before returning to his apartment and sleeping. The job was too easy but his instinct and adrenaline had kicked in anyway and sleeping was a long hours away from him. Physical exercise was what usually helped him to calm and expunge the extra energy.",
 			"longDesc3": "Even so his nose must have picked something because he quickly realised that a scent that wasn't part of these alleys was slowly intensifying in the air.",
 			"longDesc4": "[In this adventure you are Leo, and it is time to make the first of many decisions that will lead you to your destiny... or premature death.]",
 			"enterDesc": "Walk through the",
 			"url": "/cyoa/page1",
-			"locationConnection": [2, 5]
+			"locationConnection": [2, 3]
 		},
 		{
 			"id": 2,
@@ -112,41 +100,56 @@
 			"enterDesc": "Keep walking along",
 			"longDesc1": "You keep walking for another hour. You fasten your steps, but the scent never really leaves you, or neither does it intensify. You try to hear sounds, or catch the movement of some shadow that might direct you towards what might be nearby, but seems that all the senses apart from your smell is betraying you.",
 			"longDesc2": "This means only one other thing and you hope that you are wrong (and usually you never are when it is about recognising trouble).",
-			"longDesc3": "“Magic” you whisper to yourself “someone is trying to...”",
+			"longDesc3": "“Magic” you whisper to yourself “someone is trying to is trying to cast something upon me...”",
 			"url": "/cyoa/page2",
 			"locationConnection": [4, 3]
 		},
 		{
 			"id": 3,
-			"image1": "img/day1/dark-alley1.jpg",
+			"image1": "img/day1/dark-alley2.jpg",
 			"imageAlt1": "alt",
+			"imageAlt2": "alt",
+			"imageAlt3": "alt",
 			"name": "At the unusual Dark Alley",
-			"longDesc1": "longdesk 3",
+			"longDesc1": "You look and walk around, until you find in a specific spot in the middle of the alley the smell gets more pungent. A smell of a exotic spice, of a distant desert, sweat of overburdened slaves, of a thousand years old immutable place, of death and submission, of luxurious imperative desire and of powerful and intricate dark magic.",
+			"longDesc2": "At the end of the corridor a red mist of what seems like sand appears from nowhere, and a small controlled gust of wind moves it in a spinning manner creating a vortex where at the end of it a different light appears where a shadow figure of a man stand waits for you to approach this unusual corridor.",
+			"longDesc3": "The red mist vortex gets stronger and stronger occupying slowly the whole alley, the wind doesn’t seem affecting anything else, but you cover your nose and mouth quickly to avoid inhaling any of that substance while you walk slowly in a straight line towards the mysterious figure figure taking your time and assessing the situation.",
+			"longDesc4": "You never walked into a “summoning”, but you read some stories about these ancient rituals. The summary of it is, never ever ever walk away from the straight path in front of you or get shredded to pieces and become part of the mist. You wonder if the redness of it is because previous fools walked astray…",
 			"enterDesc": "Stop",
-			"enterDescAfter": "xxx",
+			"enterDescAfter": "where you first picked theup the scent and investigate",
 			"url": "/cyoa/page3",
-			"locationConnection": [1]
+			"locationConnection": [5]
 		},
 		{
 			"id": 4,
 			"image1": "img/day1/dark-alley1.jpg",
 			"imageAlt1": "alt",
 			"name": "The Darkest of the alleys",
-			"longDesc1": "longdesk 4",
+			"longDesc1": "As you quickly step towards a place with plenty of shadows to hide from, you slowly draw your sword and lie in wait for… whatever is about to happen.",
+
+			"longDesc2": "You wait for quite a while, the scent never disappears or intensifies, you keep vigilant, and still wait some more. Then all of the sudden your sword starts to become rusty. No sound, no one living in the alleys, no wind either. Just rust that should appear in the span of years is quickly spreading from the tip of your sword towards the base of the hilt at alarming speed.",
+
+			"longDesc3": "You drop the sword on the ground instantly before the rust touches your hands, and you hear the clang of the sword on the ground while it literally shatters at the impact. You slap hard yourself to try to snap out of it, but you confirm that it is not an illusion. It is magic, some kind of magic that you have never seen. ",
+
+			"longDesc4": "Now you are sure that some arcane user of sort is messing with you. They’ll pay the price in steel once the opportunity arises. You pick a rock from the ground to just not be completely empty handed, at least it will not rust.",
+
 			"enterDesc": "Run silently towards the",
+			"enterDescAfter": "and prepare for anything",
 			"url": "/cyoa/page4",
-			"locationConnection": [6, 5]
+			"locationConnection": [3]
 		},
 		{
 			"id": 5,
-			"image1": "img/day1/dark-alley1.jpg",
-			"image2": "img/day1/dark-alley2.jpg",
-			"image3": "img/day1/dark-alley3.jpg",
+			"image1": "img/day1/dark-alley3.jpg",
 			"imageAlt1": "alt",
-			"name": "At the unusual Dark Alley",
-			"longDesc1": "longdesk 3",
-			"enterDesc": "Stop",
-			"enterDescAfter": "where you first picked theup the scent and investigate",
+			"name": "Inside the red mist",
+			"longDesc1": "Your vision get completely obfuscated by the intensity of the vortex, you just see red and smell that pungent power of ancient magic. You lose track of the figure waiting for you at the end. Even so you walk towards it should have been, step by step, until as suddendly that appeared the mist dissipates over an instant, and you are across in a completely different location.",
+			"longDesc2": "longdesk 3",
+			"longDesc3": "longdesk 3",
+			"longDesc4": "longdesk 3",
+			"longDesc5": "longdesk 3",
+			"enterDesc": "Walk",
+			"enterDescAfter": "and approach the shadowy figure at the end",
 			"url": "/cyoa/page3",
 			"locationConnection": [6]
 		},

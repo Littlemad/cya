@@ -15,3 +15,30 @@
         {"id": 4, "enterDesc": "Use the spell found in", "name": "an ancient book", "item": [4]}
     ]
 },
+
+
+
+
+
+{
+    "id": 1,
+    "name": "A sharp sword",
+    "own": true,
+    "buy": 10
+},
+{
+    "id": 2,
+    "name": "An ornate dagger",
+    "own": true
+},
+{
+    "id": 3,
+    "name": "An ancient book",
+    "own": true,
+    "sell": 5
+},
+{
+    "id": 4,
+    "name": "An ancient book",
+    "own": false
+},
