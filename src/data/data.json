@@ -108,8 +108,6 @@
 			"id": 3,
 			"image1": "img/day1/dark-alley2.jpg",
 			"imageAlt1": "alt",
-			"imageAlt2": "alt",
-			"imageAlt3": "alt",
 			"name": "At the unusual Dark Alley",
 			"longDesc1": "You look and walk around, until you find in a specific spot in the middle of the alley the smell gets more pungent. A smell of a exotic spice, of a distant desert, sweat of overburdened slaves, of a thousand years old immutable place, of death and submission, of luxurious imperative desire and of powerful and intricate dark magic.",
 			"longDesc2": "At the end of the corridor a red mist of what seems like sand appears from nowhere, and a small controlled gust of wind moves it in a spinning manner creating a vortex where at the end of it a different light appears where a shadow figure of a man stand waits for you to approach this unusual corridor.",
@@ -118,7 +116,9 @@
 			"enterDesc": "Stop",
 			"enterDescAfter": "where you first picked theup the scent and investigate",
 			"url": "/cyoa/page3",
-			"locationConnection": [5]
+			"locationConnection": [5],
+			"remove": [1],
+			"add": [2]
 		},
 		{
 			"id": 4,

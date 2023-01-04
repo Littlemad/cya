@@ -42,7 +42,8 @@ function Navigation(props) {
 		return myEquip;
 	};
 
-	const manageEquipment = (itemID) => {
+	const manageEquipment = (itemID, action) => {
+		/*
 		const myItemID = itemID - 1;
 
 		if (myItem[myItemID].buy) {
@@ -68,6 +69,7 @@ function Navigation(props) {
 			);
 			setIsChoiceVisible(false);
 		}
+*/
 	};
 
 	const handleClick = (e, action) => {
@@ -80,7 +82,6 @@ function Navigation(props) {
 	};
 
 	/* KEYPRESS events */
-
 	const handleKeyPress = useCallback((event) => {
 		// console.log(`Key pressed: ${event.key}`);
 
@@ -95,6 +96,8 @@ function Navigation(props) {
 		} while (i <= myLength);
 	});
 
+	//
+
 	useEffect(() => {
 		// attach the event listener
 		document.addEventListener("keydown", handleKeyPress);
@@ -104,6 +107,38 @@ function Navigation(props) {
 			document.removeEventListener("keydown", handleKeyPress);
 		};
 	}, [handleKeyPress]);
+
+	useEffect(() => {
+		const addOrRemoveEquipment = (itemID, action) => {
+			if (itemID && action) {
+				if (action === "add") {
+					setEquipmentState((previousEquipmentState) => [...previousEquipmentState, itemID]);
+				} else if (action === "remove") {
+					setEquipmentState((current) =>
+						current.filter((item) => {
+							return item !== itemID[0];
+						})
+					);
+				}
+			}
+		};
+
+		const addOrRemoveItem = (val) => {
+			console.log("inside");
+			if (val instanceof Array) {
+				console.log("array");
+				console.log(val[0]);
+				if (val[0]) {
+					addOrRemoveEquipment(val[0], "remove");
+				}
+				if (val[1]) {
+					addOrRemoveEquipment(val[1], "add");
+				}
+			}
+		};
+
+		addOrRemoveItem([myPlace.remove, myPlace.add]);
+	}, [myPlace.remove, myPlace.add, setEquipmentState]);
 
 	return (
 		<>
