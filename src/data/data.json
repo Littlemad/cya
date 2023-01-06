@@ -68,19 +68,31 @@
 	"items": [
 		{
 			"id": 1,
-			"name": "A sharp sword",
-			"own": true
+			"name": "A sharp sword"
 		},
 		{
 			"id": 2,
-			"name": "A rock",
-			"own": true
+			"name": "A rock"
+		},
+		{
+			"id": 3,
+			"name": "A WOAH rock"
 		}
 	],
 
 	"locations": [
 		{
-			"id": "1",
+			"id": 1,
+			"name": "How to play",
+			"enterDesc": "Keep walking along",
+			"longDesc1": "xxx",
+			"longDesc2": "xxx",
+			"longDesc3": "xxx",
+			"url": "/cyoa/page1",
+			"locationConnection": [2]
+		},
+		{
+			"id": "2",
 			"image1": "img/day1/dark-alley1.jpg",
 			"imageAlt1": "xxx",
 			"name": "A dark alley",
@@ -89,11 +101,11 @@
 			"longDesc3": "Even so his nose must have picked something because he quickly realised that a scent that wasn't part of these alleys was slowly intensifying in the air.",
 			"longDesc4": "[In this adventure you are Leo, and it is time to make the first of many decisions that will lead you to your destiny... or premature death.]",
 			"enterDesc": "Walk through the",
-			"url": "/cyoa/page1",
-			"locationConnection": [2, 3]
+			"url": "/cyoa/page2",
+			"locationConnection": [3, 4]
 		},
 		{
-			"id": 2,
+			"id": 3,
 			"image1": "img/day1/dark-alley1.jpg",
 			"imageAlt1": "alt 2",
 			"name": "More dark alleys",
@@ -101,11 +113,11 @@
 			"longDesc1": "You keep walking for another hour. You fasten your steps, but the scent never really leaves you, or neither does it intensify. You try to hear sounds, or catch the movement of some shadow that might direct you towards what might be nearby, but seems that all the senses apart from your smell is betraying you.",
 			"longDesc2": "This means only one other thing and you hope that you are wrong (and usually you never are when it is about recognising trouble).",
 			"longDesc3": "“Magic” you whisper to yourself “someone is trying to is trying to cast something upon me...”",
-			"url": "/cyoa/page2",
-			"locationConnection": [4, 3]
+			"url": "/cyoa/page3",
+			"locationConnection": [5, 4]
 		},
 		{
-			"id": 3,
+			"id": 4,
 			"image1": "img/day1/dark-alley2.jpg",
 			"imageAlt1": "alt",
 			"name": "At the unusual Dark Alley",
@@ -115,13 +127,11 @@
 			"longDesc4": "You never walked into a “summoning”, but you read some stories about these ancient rituals. The summary of it is, never ever ever walk away from the straight path in front of you or get shredded to pieces and become part of the mist. You wonder if the redness of it is because previous fools walked astray…",
 			"enterDesc": "Stop",
 			"enterDescAfter": "where you first picked theup the scent and investigate",
-			"url": "/cyoa/page3",
-			"locationConnection": [5],
-			"remove": [1],
-			"add": [2]
+			"url": "/cyoa/page4",
+			"locationConnection": [6]
 		},
 		{
-			"id": 4,
+			"id": 5,
 			"image1": "img/day1/dark-alley1.jpg",
 			"imageAlt1": "alt",
 			"name": "The Darkest of the alleys",
@@ -135,11 +145,13 @@
 
 			"enterDesc": "Run silently towards the",
 			"enterDescAfter": "and prepare for anything",
-			"url": "/cyoa/page4",
-			"locationConnection": [3]
+			"url": "/cyoa/page5",
+			"locationConnection": [4],
+			"remove": [1],
+			"add": [2]
 		},
 		{
-			"id": 5,
+			"id": 6,
 			"image1": "img/day1/dark-alley3.jpg",
 			"imageAlt1": "alt",
 			"name": "Inside the red mist",
@@ -150,19 +162,19 @@
 			"longDesc5": "longdesk 3",
 			"enterDesc": "Walk",
 			"enterDescAfter": "and approach the shadowy figure at the end",
-			"url": "/cyoa/page3",
-			"locationConnection": [6]
+			"url": "/cyoa/page6",
+			"locationConnection": [7]
 		},
 		{
-			"id": 6,
+			"id": 7,
 			"image1": "img/day1/dark-alley1.jpg",
 			"imageAlt1": "alt",
 			"name": "yyy",
 			"longDesc1": "longdesk 3",
 			"enterDesc": "zzz",
 			"enterDescAfter": "xxx",
-			"url": "/cyoa/page3",
-			"locationConnection": [6]
+			"url": "/cyoa/page7",
+			"locationConnection": [8]
 		}
 	],
 	"consequences": [

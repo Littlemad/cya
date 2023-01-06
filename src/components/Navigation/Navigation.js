@@ -26,22 +26,6 @@ function Navigation(props) {
 	const [coinState, setCoinState] = useState(initialCoin);
 	const [isChoiceVisible, setIsChoiceVisible] = useState(true);
 
-	const checkNamesEquipment = () => {
-		return equipmentState.map((value) => myItem[value - 1].name).join(", ");
-	};
-
-	const checkEquipment = () => {
-		let myEquip = "The backpack is empty from the start";
-
-		if (equipmentState.length === 0) {
-			myEquip = "An empty backpack";
-		} else {
-			myEquip = checkNamesEquipment();
-		}
-
-		return myEquip;
-	};
-
 	const manageEquipment = (itemID, action) => {
 		/*
 		const myItemID = itemID - 1;
@@ -82,21 +66,30 @@ function Navigation(props) {
 	};
 
 	/* KEYPRESS events */
-	const handleKeyPress = useCallback((event) => {
-		// console.log(`Key pressed: ${event.key}`);
+	const handleKeyPress = useCallback(
+		(event) => {
+			// console.log(`Key pressed: ${event.key}`);
 
-		const myLength = myChoicesLength + myLocationLength + 1;
+			const myLength = myChoicesLength + myLocationLength + 1;
 
-		let i = 1;
-		do {
-			if (event.key === i.toString()) {
-				document.getElementsByClassName("main-nav__link-" + i)[0].click();
-			}
-			i++;
-		} while (i <= myLength);
-	});
+			let i = 1;
+			do {
+				if (event.key === i.toString()) {
+					document.getElementsByClassName("main-nav__link-" + i)[0].click();
+				}
+				i++;
+			} while (i <= myLength);
+		},
+		[myChoicesLength, myLocationLength]
+	);
 
-	//
+	// stop going back with browser
+	/*
+		window.history.pushState(null, null, window.location.href);
+		window.onpopstate = function () {
+			window.history.go(1);
+		};
+		*/
 
 	useEffect(() => {
 		// attach the event listener
@@ -108,11 +101,27 @@ function Navigation(props) {
 		};
 	}, [handleKeyPress]);
 
+	const checkEquipment = () => {
+		let myEquip = "The backpack is empty from the start";
+
+		if (equipmentState.length === 0) {
+			myEquip = "An empty backpack";
+		} else {
+			myEquip = equipmentState.map((value) => myItem[value - 1].name).join(", ");
+		}
+
+		return myEquip;
+	};
+
+	const checkDuplicate = equipmentState.some((val, i) => equipmentState.indexOf(val) !== i);
+
 	useEffect(() => {
 		const addOrRemoveEquipment = (itemID, action) => {
 			if (itemID && action) {
 				if (action === "add") {
-					setEquipmentState((previousEquipmentState) => [...previousEquipmentState, itemID]);
+					setEquipmentState((equipmentState) => {
+						return [...equipmentState, itemID];
+					});
 				} else if (action === "remove") {
 					setEquipmentState((current) =>
 						current.filter((item) => {
@@ -124,21 +133,20 @@ function Navigation(props) {
 		};
 
 		const addOrRemoveItem = (val) => {
-			console.log("inside");
 			if (val instanceof Array) {
-				console.log("array");
-				console.log(val[0]);
 				if (val[0]) {
 					addOrRemoveEquipment(val[0], "remove");
 				}
 				if (val[1]) {
-					addOrRemoveEquipment(val[1], "add");
+					if (!checkDuplicate) {
+						addOrRemoveEquipment(val[1], "add");
+					}
 				}
 			}
 		};
 
 		addOrRemoveItem([myPlace.remove, myPlace.add]);
-	}, [myPlace.remove, myPlace.add, setEquipmentState]);
+	}, [myPlace.remove, myPlace.add, setEquipmentState, checkDuplicate]);
 
 	return (
 		<>
